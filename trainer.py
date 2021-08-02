@@ -1,4 +1,4 @@
-from MetaP.plot_test import PlotUtil
+
 from torch.nn import parameter
 from models import *
 from tensorboardX import SummaryWriter
@@ -7,7 +7,7 @@ import sys
 import torch
 import shutil
 import logging
-
+from plot_util import PlotUtil
 
 class Trainer:
     def __init__(self, data_loaders, dataset, parameter):

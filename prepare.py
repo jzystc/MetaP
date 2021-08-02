@@ -4,8 +4,8 @@ import json
 import argparse
 
 args = argparse.ArgumentParser()
-args.add_argument("-path", "--dataset_path", default="./NELL", type=str)  # ./Wiki
-args.add_argument("-data", "--dataset_name", default="NELL-One", type=str)  # Wiki-One
+args.add_argument("-path", "--dataset_path", default="./NELL", type=str)
+args.add_argument("-data", "--dataset_name", default="NELL-One", type=str)
 params = args.parse_args()
 
 dire = params.dataset_path

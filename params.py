@@ -6,16 +6,16 @@ import argparse
 def get_params():
     args = argparse.ArgumentParser()
     args.add_argument(
-        "-data", "--dataset", default="NELL-One", type=str,choices=['NELL-One','Wiki-One','COVID19-One']
+        "-data", "--dataset", default="NELL-One", type=str,choices=['NELL-One','COVID19-One']
     )
     args.add_argument(
         "-path", "--data_path", default="./NELL", type=str
-    )  # ["./NELL", "./Wiki",'./COVID19']
+    )
     args.add_argument(
         "-form", "--data_form", default="Pre-Train", type=str,choices=["Pre-Train", "In-Train", "Discard"])
     args.add_argument("-seed", "--seed", default=None, type=int)
-    args.add_argument("-few", "--few", default=1, type=int)  # 1
-    args.add_argument("-nq", "--num_query", default=3, type=int)  # 3
+    args.add_argument("-few", "--few", default=1, type=int)
+    args.add_argument("-nq", "--num_query", default=3, type=int)
     args.add_argument(
         "-metric",
         "--metric",
@@ -24,14 +24,14 @@ def get_params():
     )
 
     args.add_argument("-dim", "--embed_dim", default=100, type=int)
-    args.add_argument("-bs", "--batch_size", default=64, type=int)  # 1024
-    args.add_argument("-lr", "--learning_rate", default=0.001, type=float)  # 0.001
-    args.add_argument("-es_p", "--early_stopping_patience", default=5, type=int)  # 30
+    args.add_argument("-bs", "--batch_size", default=64, type=int)
+    args.add_argument("-lr", "--learning_rate", default=0.001, type=float)
+    args.add_argument("-es_p", "--early_stopping_patience", default=5, type=int)
 
     args.add_argument("-epo", "--epoch", default=100000, type=int)
     args.add_argument("-prt_epo", "--print_epoch", default=200, type=int)
-    args.add_argument("-eval_epo", "--eval_epoch", default=1000, type=int)  # 1000
-    args.add_argument("-ckpt_epo", "--checkpoint_epoch", default=1000, type=int)  # 1000
+    args.add_argument("-eval_epo", "--eval_epoch", default=1000, type=int)
+    args.add_argument("-ckpt_epo", "--checkpoint_epoch", default=1000, type=int)
 
     args.add_argument("-p", "--dropout_p", default=0.5, type=float)
     args.add_argument("-abla", "--ablation", action="store_true")  # False
